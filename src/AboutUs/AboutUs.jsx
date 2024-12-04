@@ -24,7 +24,7 @@ const AboutUs = () => {
             <p className="text-7xl">
             <MdLocalOffer />
                 </p>
-            <h2 className="text-xl lg:text-4xl font-bold text-center py-2">WE OFFER</h2>
+            <h2 className="text-xl lg:text-4xl font-bold text-center py-2">WHAT WE OFFER</h2>
             <p>
             Explore a wide range of premium sports gear, apparel, and accessories tailored for various sports disciplines. Whether it's football, tennis, basketball, or fitness, we've got you covered.
             </p>
