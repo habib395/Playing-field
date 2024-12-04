@@ -18,11 +18,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "/allSport",
-                element: <AllSport></AllSport>
+                element: <AllSport></AllSport>,
+                loader: ()=>fetch("/AllProduct.json")
             },
             {
                 path:'/addEquipment',
-                element:<AddEquipment></AddEquipment>
+                element:<AddEquipment></AddEquipment>,
             },
             {
                 path:'/listEquipment',
