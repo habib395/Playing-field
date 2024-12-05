@@ -21,7 +21,7 @@ const Navbar = () =>{
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/allSport" className='ml-4'>All Sports Equipment</NavLink>
                 <NavLink to="/addEquipment" className='ml-4'>Add Equipment</NavLink>
-                <NavLink to="/listEquipment" className='ml-4'>List My Equipment List</NavLink>
+                <NavLink to="/listEquipment" className='ml-4'>My Equipment List</NavLink>
             </div>
             <div className='flex'>
                 {

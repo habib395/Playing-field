@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const AddEquipment = () => {
+
+    const { user } = useContext(AuthContext)
+    console.log(user);
+
     const handleAddEquipment = event =>{
         event.preventDefault()
         const form  = event.target 
@@ -122,7 +128,9 @@ const AddEquipment = () => {
                 <span className="label-text">User Email</span>
             </label>
             <label className="input-group">
-            <input type="text" name="UserEmail" placeholder="User Email" className="input input-bordered w-full" />
+            <input type="email" name="UserEmail" 
+            defaultValue={user && user.email}
+            placeholder="User Email" className="input input-bordered w-full" disabled/>
             </label>
          </div>
          <div className="form-control md:w-1/2">
@@ -130,7 +138,9 @@ const AddEquipment = () => {
                 <span className="label-text">User Name</span>
             </label>
             <label className="input-group">
-            <input type="text" name="UserName" placeholder="User Name" className="input input-bordered w-full ml-2" />
+            <input type="text" name="UserName" 
+            defaultValue={user && user.displayName}
+            placeholder="User Name" className="input input-bordered w-full ml-2" disabled/>
             </label>
          </div>
         </div>
