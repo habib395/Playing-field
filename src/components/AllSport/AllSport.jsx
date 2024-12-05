@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { NavLink, useLoaderData } from "react-router-dom"
 
 const AllSport = () =>{
     const allProducts = useLoaderData()
@@ -38,7 +38,9 @@ const AllSport = () =>{
                                 {product.stockStatus} in stock 
                                 </td>
                                 <td className="border px-4 py-2">
+                                <NavLink to={`/details/${product.id}`}>
                                 <button className="btn btn-success">View Details</button>
+                                </NavLink>
                                 </td>
                             </tr>
                         ))

@@ -1,41 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ProductCard = ({product}) => {
 
-  const { categoryName, image, price, rating, stockStatus, description  } = product
+  const { id, categoryName, image, price, rating, stockStatus, description  } = product
   // console.log(product);
 
-
-//   categoryName
-// : 
-// "Fitness Equipment"
-// customization
-// : 
-// "Custom color and thickness"
-// description
-// : 
-// "Non-slip yoga mat for comfortable practice."
-// id
-// : 
-// 9
-// image
-// : 
-// "https://i.ibb.co.com/47LWC97/pro-nine.png"
-// itemName
-// : 
-// "Yoga Mat"00000000000000000000000000000000
-// price
-// : 
-// 20
-// processingTime
-// : 
-// "4-5 business days"
-// rating
-// : 
-// 4.7
-// stockStatus
-// : 
-// 50
 
 
   return (
@@ -52,9 +22,11 @@ const ProductCard = ({product}) => {
         <div className="badge badge-success text-white">{price} $</div>
         </h2>
         <p className="text-green-700">{description}</p>
-        <div className="card-actions">
+        
+          <NavLink to={`/details/${id}`}>
           <button className="btn btn-success">View Details</button>
-        </div>
+          </NavLink>
+      
       </div>
     </div>
   );

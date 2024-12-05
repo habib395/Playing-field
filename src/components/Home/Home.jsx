@@ -14,8 +14,8 @@ const Home = () => {
           OUR PRODUCT
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
-          {products.map((product) => (
-            <ProductCard product={product}></ProductCard>
+          {products.map((product, idx) => (
+            <ProductCard key={idx} product={product}></ProductCard>
           ))}
         </div>
       </div>
