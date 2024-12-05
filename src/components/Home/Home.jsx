@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "../../Slider/Slider";
 import ProductCard from "../Products/ProductCard";
 import AboutUs from "../../AboutUs/AboutUs";
+import SportCategory from "../../SportCategory/SportCategory";
 
 const Home = () => {
   const products = useLoaderData();
@@ -9,6 +10,9 @@ const Home = () => {
   return (
     <div>
       <Slider></Slider>
+      {/* <div className="py-8">
+      <SportCategory></SportCategory>
+      </div> */}
       <div>
         <h2 className="text-green-500 font-bold text-4xl text-center py-3">
           OUR PRODUCT

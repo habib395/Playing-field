@@ -8,6 +8,7 @@ import Details from "../components/Details/Details"
 import Login from "../Login/Login"
 import Register from "../Register/Register"
 import Update from "../Update/Update"
+import AllDetails from "../AllDetails/AllDetails"
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
             {
                 path:"/",
                 element:<Home></Home>,
-                loader:()=> fetch("/Product.json")
+                loader:()=> fetch("http://localhost:5000/addEquipment")
             },
             {
                 path: "/login",
@@ -30,15 +31,25 @@ const router = createBrowserRouter([
             {
                 path: "/allSport",
                 element: <AllSport></AllSport>,
-                loader: ()=>fetch("/AllProduct.json")
+                loader: ()=>fetch("http://localhost:5000/addEquipments")
             },
             {
                 path: "details/:id",
                 element:<Details></Details>,
                 loader: async({ params }) =>{
-                    const res = await fetch("/AllProduct.json")
+                    const res = await fetch("http://localhost:5000/addEquipment")
                     const data = await res.json()
-                    const singleData = data.find(d => d.id == params.id)
+                    const singleData = data.find(d => d._id == params.id)
+                    return singleData
+                }
+            },
+            {
+                path: "allDetails/:id",
+                element:<AllDetails></AllDetails>,
+                loader: async({ params }) =>{
+                    const res = await fetch("http://localhost:5000/addEquipments")
+                    const data = await res.json()
+                    const singleData = data.find(d => d._id == params.id)
                     return singleData
                 }
             },

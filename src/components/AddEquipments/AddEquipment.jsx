@@ -15,7 +15,7 @@ const AddEquipment = () => {
         const StockStatus = form.StockStatus.value
         const Image = form.PhotoURL.value
         const newEquipment = {ItemName, CategoryName, Description, Price, Rating, Customization, ProcessingTime, StockStatus, Image}
-        console.log(newEquipment);
+        // console.log(newEquipment);
 
         // send data to the server
         fetch('http://localhost:5000/addEquipment', {
@@ -37,6 +37,7 @@ const AddEquipment = () => {
                   })
             }
         })
+        e.target.reset()
     }
   return (
     <div className="bg-green-200 p-24">
