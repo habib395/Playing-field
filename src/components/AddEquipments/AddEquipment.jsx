@@ -43,7 +43,7 @@ const AddEquipment = () => {
                   })
             }
         })
-        e.target.reset()
+        event.target.reset()
     }
   return (
     <div className="bg-green-200 p-24">
