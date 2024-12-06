@@ -9,6 +9,7 @@ import Login from "../Login/Login"
 import Register from "../Register/Register"
 import Update from "../Update/Update"
 import AllDetails from "../AllDetails/AllDetails"
+import PrivateRoute from './../PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -30,12 +31,14 @@ const router = createBrowserRouter([
             },
             {
                 path: "/allSport",
-                element: <AllSport></AllSport>,
+                element:<AllSport></AllSport>,
                 loader: ()=>fetch("http://localhost:5000/addEquipments")
             },
             {
                 path: "details/:id",
-                element:<Details></Details>,
+                element:<PrivateRoute>
+                    <Details></Details>
+                </PrivateRoute>,
                 loader: async({ params }) =>{
                     const res = await fetch("http://localhost:5000/addEquipment")
                     const data = await res.json()
@@ -45,7 +48,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "allDetails/:id",
-                element:<AllDetails></AllDetails>,
+                element:<PrivateRoute>
+                    <AllDetails></AllDetails>
+                </PrivateRoute>,
                 loader: async({ params }) =>{
                     const res = await fetch("http://localhost:5000/addEquipments")
                     const data = await res.json()
@@ -55,7 +60,9 @@ const router = createBrowserRouter([
             },
             {
                 path:'/addEquipment',
-                element:<AddEquipment></AddEquipment>,
+                element:<PrivateRoute>
+                    <AddEquipment></AddEquipment>
+                </PrivateRoute>,
             },
             {
                 path: '/update',
@@ -63,7 +70,9 @@ const router = createBrowserRouter([
             },
             {
                 path:'/listEquipment',
-                element:<ListEquipment></ListEquipment>
+                element:<PrivateRoute>
+                    <ListEquipment></ListEquipment>
+                </PrivateRoute>,
             }
         ]
     },
