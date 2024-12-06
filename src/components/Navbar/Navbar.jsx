@@ -7,7 +7,7 @@ import { GiAmericanFootballPlayer } from "react-icons/gi";
 
 const Navbar = () =>{
     const { user, handleLogOut } = useContext(AuthContext) 
-    // console.log(user);
+    console.log(user);
     return (
         <div className='bg-base-200'>
             <div className='w-11/12 mx-auto min-h-20 sm:flex flex-cols justify-between items-center'>
@@ -21,7 +21,7 @@ const Navbar = () =>{
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/allSport" className='ml-4'>All Sports Equipment</NavLink>
                 <NavLink to="/addEquipment" className='ml-4'>Add Equipment</NavLink>
-                <NavLink to="/listEquipment" className='ml-4'>My Equipment List</NavLink>
+                <NavLink to={`/equipment/${user?.email}`} className='ml-4'>My Equipment List</NavLink>
             </div>
             <div className='flex'>
                 {

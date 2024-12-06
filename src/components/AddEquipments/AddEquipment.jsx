@@ -6,7 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 const AddEquipment = () => {
 
     const { user } = useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
 
     const handleAddEquipment = event =>{
         event.preventDefault()
@@ -19,9 +19,12 @@ const AddEquipment = () => {
         const Customization = form.Customization.value
         const ProcessingTime  = form.ProcessingTime.value
         const StockStatus = form.StockStatus.value
+        const UserName = form.UserName.value
+        const UserEmail = form.UserEmail.value
+
         const Image = form.PhotoURL.value
-        const newEquipment = {ItemName, CategoryName, Description, Price, Rating, Customization, ProcessingTime, StockStatus, Image}
-        // console.log(newEquipment);
+        const newEquipment = {ItemName, CategoryName, Description, Price, Rating, Customization, ProcessingTime, StockStatus, UserEmail, UserName, Image}
+        console.log(newEquipment);
 
         // send data to the server
         fetch('http://localhost:5000/addEquipment', {

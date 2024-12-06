@@ -218,7 +218,7 @@
   ]
   
   // "id": 19,
-  // "image": "https://i.ibb.co.com/q1Tr34z/pro-nineteen.png",
+  // "image": "https://i.ibb.co.com/M1tMTd0/pro-nineteen.png",
   // "itemName": "Camping Tent",
   // "categoryName": "Outdoor Gear",
   // "description": "Lightweight, waterproof tent for 2-4 people.",
@@ -227,3 +227,50 @@
   // "customization": "Custom color and logo",
   // "processingTime": "6-8 business days",
   // "stockStatus": 20
+
+  // "id": 20,
+  // "image": "https://i.ibb.co.com/CnL4LjH/pro-twenty.png",
+  // "itemName": "Fishing Rod",
+  // "categoryName": "Fishing Equipment",
+  // "description": "Durable carbon fiber fishing rod for all fishing styles.",
+  // "price": 75.00,
+  // "rating": 4.6,
+  // "customization": "Custom length and handle grip",
+  // "processingTime": "4-6 business days",
+  // "stockStatus": 30
+
+
+  // "id": 21,
+  //   "image": "https://i.ibb.co.com/5spNZPC/pro-t-one.png",
+  //   "itemName": "Rock Climbing Shoes",
+  //   "categoryName": "Footwear",
+  //   "description": "Grip-enhanced climbing shoes for extreme sports.",
+  //   "price": 110.00,
+  //   "rating": 4.8,
+  //   "customization": "Custom size and color",
+  //   "processingTime": "5-7 business days",
+  //   "stockStatus": 15
+
+  // "id": 22,
+  //   "image": "https://i.ibb.co.com/H1JyQLw/pro-twentytwo.png",
+  //   "itemName": "Kayak Paddle",
+  //   "categoryName": "Water Sports",
+  //   "description": "Lightweight, durable paddle for kayaking.",
+  //   "price": 65.00,
+  //   "rating": 4.5,
+  //   "customization": "Custom shaft length and blade design",
+  //   "processingTime": "3-5 business days",
+  //   "stockStatus": 25
+  // },
+  // {
+  //   "id": 23,
+  //   "image": "https://i.ibb.co.com/D4LmR1Z/pro-t-three.png",
+  //   "itemName": "Trail Running Backpack",
+  //   "categoryName": "Outdoor Gear",
+  //   "description": "Compact, water-resistant backpack for trail runners.",
+  //   "price": 89.99,
+  //   "rating": 4.7,
+  //   "customization": "Custom color and logo embroidery",
+  //   "processingTime": "4-6 business days",
+  //   "stockStatus": 18
+  // }

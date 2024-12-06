@@ -9,7 +9,6 @@ export const AuthContext = createContext()
 const  AuthProvider = ({routes}) =>{
 
     const [user, setUser] = useState(null)
-    console.log(user);
     const [loading, setLoading] = useState(true)
 
     const handleRegister = (email, password)=>{
