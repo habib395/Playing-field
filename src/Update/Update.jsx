@@ -5,24 +5,24 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Update = () => {
     const { user } = useContext(AuthContext)
-  const item = useLoaderData();
+    const item = useLoaderData();
 //   console.log(item);
 
   const {
+    _id,
     ItemName,
-    categoryName,
+    CategoryName,
     Description,
     Price,
     Rating,
     Customization,
     ProcessingTime,
     StockStatus,
-    UserEmail,
-    UserName,
     Image,
   } = item;
+//   console.log(_id);
 
-  const handleAddEquipment = (event) => {
+  const handleUpdateEquipment = (event) => {
     event.preventDefault();
     const form = event.target;
     const ItemName = form.ItemName.value;
@@ -50,11 +50,11 @@ const Update = () => {
       UserName,
       Image,
     };
-    console.log(newEquipment);
+    // console.log(newEquipment);
 
     // send data to the server
-    fetch("http://localhost:5000/addEquipment", {
-      method: "POST",
+    fetch(`http://localhost:5000/equipment/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
@@ -63,10 +63,10 @@ const Update = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Equipment Added Successfully",
+            text: "Equipment Updated Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -80,7 +80,7 @@ const Update = () => {
       <h2>Update Instruments:{ItemName} </h2>
       <div className="bg-green-200 p-24">
         <h2 className="text-3xl font-extrabold">Update A Equipment</h2>
-        <form onSubmit={handleAddEquipment}>
+        <form onSubmit={handleUpdateEquipment}>
           {/* form-row */}
           <div className="md:flex">
             <div className="form-control md:w-1/2">
@@ -105,7 +105,7 @@ const Update = () => {
                 <input
                   type="text"
                   name="categoryName"
-                  defaultValue={categoryName}
+                  defaultValue={CategoryName}
                   placeholder="Category Name"
                   className="input input-bordered w-full ml-2"
                 />
@@ -253,7 +253,7 @@ const Update = () => {
           </div>
           <input
             type="submit"
-            value="Add Equipment"
+            value="Update Equipment"
             className="btn btn-block bg-green-500 my-3"
           />
         </form>
