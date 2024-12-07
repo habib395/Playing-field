@@ -18,10 +18,9 @@ const Footer = () => {
           <br />
           Providing reliable tech since 1992
         </p>
-        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>
       <nav>
-        <div className="grid grid-flow-col gap-4">
+        <div className="grid grid-flow-col gap-6">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +56,13 @@ const Footer = () => {
           </a>
         </div>
       </nav>
+      <nav className="grid grid-flow-col gap-4">
+        <a className="link link-hover">About us</a>
+        <a className="link link-hover">Contact</a>
+        <a className="link link-hover">Jobs</a>
+        <a className="link link-hover">Press kit</a>
+      </nav>
+      <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
     </footer>
   );
 };

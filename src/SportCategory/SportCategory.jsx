@@ -3,7 +3,7 @@ import Cat from "../Cat/Cat";
 
 const SportCategory = () => {
     const [category, setCategory] = useState([])
-    console.log(category);
+    // console.log(category);
 
     useEffect(() =>{
         fetch("http://localhost:5000/addEquipments")

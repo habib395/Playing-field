@@ -6,7 +6,6 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const Update = () => {
     const { user } = useContext(AuthContext)
     const item = useLoaderData();
-//   console.log(item);
 
   const {
     _id,
@@ -20,7 +19,6 @@ const Update = () => {
     StockStatus,
     Image,
   } = item;
-//   console.log(_id);
 
   const handleUpdateEquipment = (event) => {
     event.preventDefault();
@@ -50,7 +48,6 @@ const Update = () => {
       UserName,
       Image,
     };
-    // console.log(newEquipment);
 
     // send data to the server
     fetch(`http://localhost:5000/equipment/${_id}`, {

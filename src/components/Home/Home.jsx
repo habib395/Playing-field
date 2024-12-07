@@ -3,12 +3,30 @@ import Slider from "../../Slider/Slider";
 import ProductCard from "../Products/ProductCard";
 import AboutUs from "../../AboutUs/AboutUs";
 import SportCategory from "../../SportCategory/SportCategory";
+import { useState } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Home = () => {
   const products = useLoaderData();
-  // console.log(products);
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const toggleTheme = () =>{
+    setDarkMode(!darkMode)
+    if(!darkMode){
+      document.documentElement.classList.add("dark")
+    }else{
+      document.documentElement.classList.remove("dark")
+    }
+  }
+
   return (
-    <div>
+    <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+      <div className="p-4 text-right">
+      <button onClick={toggleTheme} className="p-2 bg-green-500 text-white rounded shadow hover:bg-green-600">
+      {darkMode ? <MdLightMode /> : <MdDarkMode />}
+      </button>
+      </div>
       <Slider></Slider>
       <div className="py-8">
       <SportCategory></SportCategory>
