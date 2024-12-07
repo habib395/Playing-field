@@ -7,7 +7,7 @@ import { useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import football from "../../../public/football.json";
 import Lottie from "lottie-react";
-import { Slide } from "react-awesome-reveal";
+import { Bounce, Slide } from "react-awesome-reveal";
 
 const Home = () => {
   const products = useLoaderData();
@@ -25,7 +25,13 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <div className="p-4 text-right">
+      <div className="p-4 text-sm text-right sm:flex justify-between">
+        <div></div>
+        <Slide>
+          <p className="text-green-400 sm:text-xl">
+            Your Ultimate Destination for Premium Sports Gear and Accessories
+          </p>
+        </Slide>
         <button
           onClick={toggleTheme}
           className="p-2 bg-green-500 text-white rounded shadow hover:bg-green-600"
@@ -36,9 +42,9 @@ const Home = () => {
       <Slider></Slider>
       <div className="py-8">
         <SportCategory></SportCategory>
-        <div className="flex items-center justify-center w-10/12 mx-auto p-16 gap-10">
+        <div className="sm:flex flex-cols items-center justify-center w-10/12 mx-auto p-3 sm:p-16 gap-10">
           <Slide>
-            <p className="text-xl font-semibold text-green-400">
+            <p className="sm:text-xl sm:font-semibold text-green-400">
               <i>
                 "Explore our Sports Categories featuring top-notch gear like
                 Soccer Cleats, Tennis Rackets, Fitness Equipment, Winter Sports
@@ -53,10 +59,10 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-green-500 font-bold text-4xl text-center py-3">
+        <h2 className="text-green-500 sm:font-bold sm:text-4xl text-center py-3">
           OUR PRODUCT
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-2 sm:p-10">
           {products.map((product, idx) => (
             <ProductCard key={idx} product={product}></ProductCard>
           ))}
@@ -64,38 +70,44 @@ const Home = () => {
       </div>
       {/* about us section  */}
       <div className="py-10">
-        <h2 className="text-green-700 font-bold text-4xl text-center py-3">
+        <h2 className="text-green-700 sm:font-bold sm:text-4xl text-center py-3">
           ABOUT US
         </h2>
       </div>
       <AboutUs></AboutUs>
       {/* satisfaction section */}
       <div className="py-10">
-        <h2 className="text-green-500 font-bold text-4xl text-center py-3">
+        <h2 className="text-green-500 sm:font-bold sm:text-4xl text-center py-3">
           OUR CUSTOMER SATISFACTION
         </h2>
         {/* card customer */}
         <div className="text-green-500 p-3 w-11/12 mx-auto">
-          <div className="card card-side border-2 border-green-500">
-            <figure>
-              <img
-                src="https://i.ibb.co.com/VjbJPP6/satis-one.png"
-                alt="Movie"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Professional Football</h2>
-              <p>
-                "As a professional player, I've tried countless footballs, but
-                this one truly stands out. The grip, bounce, and durability are
-                unmatched. It's perfect for every game, whether on grass or
-                turf. Highly recommended for anyone serious about football!"
-              </p>
-              <p className="text-base font-bold">Michael J., Pro Footballer</p>
+          <Bounce>
+            <div className="sm:flex card-side border-2 border-green-500">
+              <figure>
+                <img
+                  src="https://i.ibb.co.com/VjbJPP6/satis-one.png"
+                  alt="Movie"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Professional Football</h2>
+                <p>
+                  "As a professional player, I've tried countless footballs, but
+                  this one truly stands out. The grip, bounce, and durability
+                  are unmatched. It's perfect for every game, whether on grass
+                  or turf. Highly recommended for anyone serious about
+                  football!"
+                </p>
+                <p className="text-base font-bold">
+                  Michael J., Pro Footballer
+                </p>
+              </div>
             </div>
-          </div>
+          </Bounce>
+
           {/* card-two */}
-          <div className="card card-side border-2 border-green-500 mt-5">
+          <div className="sm:flex card-side border-2 border-green-500 mt-5">
             <figure>
               <img
                 src="https://i.ibb.co.com/sb08yw7/satis-two.png"
@@ -116,26 +128,28 @@ const Home = () => {
             </div>
           </div>
           {/* card three */}
-          <div className="card card-side border-2 border-green-500 mt-5">
-            <figure>
-              <img
-                src="https://i.ibb.co.com/Cw9VhyJ/satis-three.png"
-                alt="Movie"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Soccer Cleats</h2>
-              <p>
-                "These cleats are a game-changer! They're so light, I feel like
-                I'm flying across the field. Plus, the customization option
-                allowed me to make them truly mine. Best investment for any
-                soccer lover!"
-              </p>
-              <p className="text-base font-bold">Emma P., Soccer Coach</p>
+          <Bounce>
+            <div className="sm:flex card-side border-2 border-green-500 mt-5">
+              <figure>
+                <img
+                  src="https://i.ibb.co.com/Cw9VhyJ/satis-three.png"
+                  alt="Movie"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Soccer Cleats</h2>
+                <p>
+                  "These cleats are a game-changer! They're so light, I feel
+                  like I'm flying across the field. Plus, the customization
+                  option allowed me to make them truly mine. Best investment for
+                  any soccer lover!"
+                </p>
+                <p className="text-base font-bold">Emma P., Soccer Coach</p>
+              </div>
             </div>
-          </div>
+          </Bounce>
           {/* card four  */}
-          <div className="card card-side border-2 border-green-500 mt-5">
+          <div className="sm:flex card-side border-2 border-green-500 mt-5">
             <figure>
               <img
                 src="https://i.ibb.co.com/426y0nz/satis-four.png"
@@ -154,24 +168,28 @@ const Home = () => {
             </div>
           </div>
           {/* card five  */}
-          <div className="card card-side border-2 border-green-500 mt-5">
-            <figure>
-              <img
-                src="https://i.ibb.co.com/9NZ12Gx/satis-five.png"
-                alt="Movie"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">Tennis Racket Pro</h2>
-              <p>
-                "This racket has elevated my game to the next level. The
-                balance, power, and control are perfect for both practice and
-                tournaments. It's clear a lot of thought went into its design. A
-                must-have for any serious tennis player!"
-              </p>
-              <p className="text-base font-bold">Sophia L., Tennis Champion</p>
+          <Bounce>
+            <div className="sm:flex card-side border-2 border-green-500 mt-5">
+              <figure>
+                <img
+                  src="https://i.ibb.co.com/9NZ12Gx/satis-five.png"
+                  alt="Movie"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Tennis Racket Pro</h2>
+                <p>
+                  "This racket has elevated my game to the next level. The
+                  balance, power, and control are perfect for both practice and
+                  tournaments. It's clear a lot of thought went into its design.
+                  A must-have for any serious tennis player!"
+                </p>
+                <p className="text-base font-bold">
+                  Sophia L., Tennis Champion
+                </p>
+              </div>
             </div>
-          </div>
+          </Bounce>
         </div>
       </div>
     </div>

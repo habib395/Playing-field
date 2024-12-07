@@ -3,7 +3,6 @@ import Cat from "../Cat/Cat";
 
 const SportCategory = () => {
     const [category, setCategory] = useState([])
-    // console.log(category);
 
     useEffect(() =>{
         fetch("http://localhost:5000/addEquipments")
@@ -15,8 +14,8 @@ const SportCategory = () => {
 
     return (
         <div>
-            <h2 className="text-4xl text-green-500 font-bold text-center py-8">Equipment Category</h2>
-            <div className="grid grid-cols-5 w-10/12 mx-auto gap-5">
+            <h2 className="sm:text-4xl text-green-500 font-bold text-center py-2 sm:py-8">Equipment Category</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-5 w-10/12 mx-auto gap-5">
                 {
                     category.map((item, idx)=><Cat key={idx} item={item}></Cat>)
                 }

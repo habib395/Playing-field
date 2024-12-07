@@ -34,7 +34,7 @@ const ProductCard = ({product}) => {
 // : 
 // "675196cb8658dee1cf00f604"
 
-  const { _id, CategoryName, Image, Price, Description  } = product
+  const { _id, ItemName, CategoryName, Image, Price, Description  } = product
   // console.log(product);
 
 
@@ -49,7 +49,7 @@ const ProductCard = ({product}) => {
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title text-green-700">{CategoryName}
+        <h2 className="card-title text-green-700">{ItemName}
         <div className="badge badge-success text-white">{Price} $</div>
         </h2>
         <p className="text-green-700">{Description}</p>

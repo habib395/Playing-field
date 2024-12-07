@@ -48,8 +48,8 @@ const AddEquipment = () => {
         event.target.reset()
     }
   return (
-    <div className="bg-green-200 p-24">
-      <h2 className="text-3xl font-extrabold">All A Equipment</h2>
+    <div className="bg-green-200 p-16">
+      <h2 className="text-3xl font-semibold text-center py-5">All A Equipment</h2>
       <form onSubmit={handleAddEquipment}>
         {/* form-row */}
         <div className="md:flex">

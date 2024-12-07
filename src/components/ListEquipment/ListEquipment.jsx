@@ -21,12 +21,11 @@ const ListEquipment = () => {
 
   return (
     <div>
-      <h2>Equipment list for: {email}</h2>
-      <h2>Equipment : {equipmentList.length}</h2>
+      <h2 className="text-xl text-green-400 text-center my-2">Equipment list for: {email}</h2>
       <ul>
         {equipmentList.length > 0 ? (
           equipmentList.map((item) => (
-            <LIstEquip key={item._id} item={item}></LIstEquip>
+            <LIstEquip key={item._id} equipmentList={equipmentList} setEquipmentList={setEquipmentList} item={item}></LIstEquip>
           ))
         ) : (
           <p>No equipment found for this user.</p>

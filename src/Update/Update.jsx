@@ -74,9 +74,8 @@ const Update = () => {
 
   return (
     <div>
-      <h2>Update Instruments:{ItemName} </h2>
-      <div className="bg-green-200 p-24">
-        <h2 className="text-3xl font-extrabold">Update A Equipment</h2>
+      <div className="bg-green-200 p-16">
+        <h2 className="text-3xl font-semibold text-center py-5">Update A Equipment</h2>
         <form onSubmit={handleUpdateEquipment}>
           {/* form-row */}
           <div className="md:flex">
