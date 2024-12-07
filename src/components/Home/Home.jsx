@@ -5,6 +5,8 @@ import AboutUs from "../../AboutUs/AboutUs";
 import SportCategory from "../../SportCategory/SportCategory";
 import { useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import football from '../../../public/football.json'
+import Lottie from "lottie-react";
 
 const Home = () => {
   const products = useLoaderData();
@@ -30,6 +32,11 @@ const Home = () => {
       <Slider></Slider>
       <div className="py-8">
       <SportCategory></SportCategory>
+      <div className="flex items-center justify-center">
+      <div style={{ width: "35%" }}>
+      <Lottie animationData={football} />
+      </div>
+      </div>
       </div>
       <div>
         <h2 className="text-green-500 font-bold text-4xl text-center py-3">
