@@ -21,9 +21,8 @@ const AddEquipment = () => {
         const StockStatus = form.StockStatus.value
         const UserName = form.UserName.value
         const UserEmail = form.UserEmail.value
-
         const Image = form.PhotoURL.value
-        const newEquipment = {ItemName, CategoryName, Description, Price, Rating, Customization, ProcessingTime, StockStatus, email, UserName, Image}
+        const newEquipment = {ItemName, CategoryName, Description, Price, Rating, Customization, ProcessingTime, StockStatus, UserEmail, UserName, Image}
         console.log(newEquipment);
 
         // send data to the server

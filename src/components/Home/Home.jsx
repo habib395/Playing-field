@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <div>
       <Slider></Slider>
-      {/* <div className="py-8">
+      <div className="py-8">
       <SportCategory></SportCategory>
-      </div> */}
+      </div>
       <div>
         <h2 className="text-green-500 font-bold text-4xl text-center py-3">
           OUR PRODUCT
