@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../firebase/firebase.config";
 
 
@@ -30,7 +31,7 @@ const  AuthProvider = ({routes}) =>{
         })
     }
 
-    const updateUserProfile = (updateData) =>{
+    const updateUserProfile = (updatedData) =>{
         return updateProfile(auth.currentUser , 
             updatedData)
     }

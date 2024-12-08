@@ -1,8 +1,7 @@
-import { useState } from "react"
+
 import { FaStar } from "react-icons/fa"
 import { useLoaderData } from "react-router-dom"
-import { toast, ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+
 
 const Details = () =>{
 
@@ -52,7 +51,6 @@ const Details = () =>{
             </div>
             <br />
             </div>
-            <ToastContainer />
         </div>
     )
 }

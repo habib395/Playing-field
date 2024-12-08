@@ -11,18 +11,17 @@ const AllSport = () =>{
     }
 
     return(
-        <div className="container mx-auto p-10">
+        <div className="container mx-auto sm:p-10">
             <h1 className="text-2xl font-bold mb-4 text-center text-green-400">SPORT EQUIPMENT</h1>
 
-            <button onClick={handleSortByPrice} className="btn bg-green-500 my-2">Sort By Price</button>
-            <table className="min-w-full bg-white border border-gray-200">
+            <button onClick={handleSortByPrice} className="btn bg-green-500 m-2 sm:m-6">Sort By Price</button>
+            <table className="w-11/12 mx-auto bg-white border border-gray-200">
                 <thead>
                     <tr>
                         <th className="border px-4 py-2">Image</th>
-                        <th className="border px-4 py-2">Item Name</th>
-                        <th className="border px-4 py-2">Category</th>
+                        <th className="hidden sm:block border px-4 py-2">Item Name</th>
                         <th className="border px-4 py-2">Price</th>
-                        <th className="border px-4 py-2">Stock Status</th>
+                        <th className="hidden sm:block border px-4 py-2">Stock Status</th>
                         <th className="border px-4 py-2">More Info</th>
                     </tr>
                 </thead>
@@ -32,17 +31,15 @@ const AllSport = () =>{
                             <tr key={product._id} className="text-center">
                                 <td className="border px-4 py-2">
                                 <img src={product.Image} alt={product.ItemName} className="h-12 w-12 object-cover mx-auto"/>
+                                <p className="text-sm sm:hidden">{product.ItemName}</p>
                                 </td>
-                                <td className="border px-4 py-2">
+                                <td className="hidden sm:block border px-4 py-2 sm:pb-8">
                                 {product.ItemName}
-                                </td>
-                                <td className="border px-4 py-2">
-                                {product.CategoryName}
                                 </td>
                                 <td className="border px-4 py-2">
                                 {product.Price} $
                                 </td>
-                                <td className="border px-4 py-2">
+                                <td className="hidden sm:block border px-4 py-2 sm:pb-8">
                                 {product.StockStatus} in stock 
                                 </td>
                                 <td className="border px-4 py-2">

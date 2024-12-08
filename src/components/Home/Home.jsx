@@ -5,7 +5,7 @@ import AboutUs from "../../AboutUs/AboutUs";
 import SportCategory from "../../SportCategory/SportCategory";
 import { useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import football from "../../../public/football.json";
+import football from "../../football.json";
 import Lottie from "lottie-react";
 import { Bounce, Slide } from "react-awesome-reveal";
 
@@ -28,7 +28,7 @@ const Home = () => {
       <div className="p-4 text-sm text-right sm:flex justify-between">
         <div></div>
         <Slide>
-          <p className="text-green-400 sm:text-xl">
+          <p className="text-green-400 text-center sm:text-xl">
             Your Ultimate Destination for Premium Sports Gear and Accessories
           </p>
         </Slide>
@@ -42,7 +42,7 @@ const Home = () => {
       <Slider></Slider>
       <div className="py-8">
         <SportCategory></SportCategory>
-        <div className="sm:flex flex-cols items-center justify-center w-10/12 mx-auto p-3 sm:p-16 gap-10">
+        <div className="sm:flex flex-cols items-center justify-center w-11/12 mx-auto p-3 sm:p-16 gap-4">
           <Slide>
             <p className="sm:text-xl sm:font-semibold text-green-400">
               <i>
@@ -59,10 +59,10 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-green-500 sm:font-bold sm:text-4xl text-center py-3">
+        <h2 className="text-green-500 font-bold text-xl sm:text-4xl text-center py-3">
           OUR PRODUCT
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-2 sm:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2 sm:p-10">
           {products.map((product, idx) => (
             <ProductCard key={idx} product={product}></ProductCard>
           ))}
@@ -70,20 +70,20 @@ const Home = () => {
       </div>
       {/* about us section  */}
       <div className="py-10">
-        <h2 className="text-green-700 sm:font-bold sm:text-4xl text-center py-3">
+        <h2 className="text-green-700 font-bold text-xl sm:text-4xl text-center py-3">
           ABOUT US
         </h2>
       </div>
       <AboutUs></AboutUs>
       {/* satisfaction section */}
       <div className="py-10">
-        <h2 className="text-green-500 sm:font-bold sm:text-4xl text-center py-3">
+        <h2 className="text-green-500 font-bold text-xl sm:text-4xl text-center py-3">
           OUR CUSTOMER SATISFACTION
         </h2>
         {/* card customer */}
         <div className="text-green-500 p-3 w-11/12 mx-auto">
           <Bounce>
-            <div className="sm:flex card-side border-2 border-green-500">
+            <div className="sm:flex card-side border-2 border-green-500 rounded-md">
               <figure>
                 <img
                   src="https://i.ibb.co.com/VjbJPP6/satis-one.png"
@@ -107,7 +107,7 @@ const Home = () => {
           </Bounce>
 
           {/* card-two */}
-          <div className="sm:flex card-side border-2 border-green-500 mt-5">
+          <div className="sm:flex card-side border-2 border-green-500 rounded-md mt-5">
             <figure>
               <img
                 src="https://i.ibb.co.com/sb08yw7/satis-two.png"
@@ -129,7 +129,7 @@ const Home = () => {
           </div>
           {/* card three */}
           <Bounce>
-            <div className="sm:flex card-side border-2 border-green-500 mt-5">
+            <div className="sm:flex card-side border-2 border-green-500 rounded-md mt-5">
               <figure>
                 <img
                   src="https://i.ibb.co.com/Cw9VhyJ/satis-three.png"
@@ -149,7 +149,7 @@ const Home = () => {
             </div>
           </Bounce>
           {/* card four  */}
-          <div className="sm:flex card-side border-2 border-green-500 mt-5">
+          <div className="sm:flex card-side border-2 border-green-500 rounded-md mt-5">
             <figure>
               <img
                 src="https://i.ibb.co.com/426y0nz/satis-four.png"
@@ -169,7 +169,7 @@ const Home = () => {
           </div>
           {/* card five  */}
           <Bounce>
-            <div className="sm:flex card-side border-2 border-green-500 mt-5">
+            <div className="sm:flex card-side border-2 border-green-500 rounded-md mt-5">
               <figure>
                 <img
                   src="https://i.ibb.co.com/9NZ12Gx/satis-five.png"

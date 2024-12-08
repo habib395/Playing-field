@@ -50,7 +50,7 @@ const Update = () => {
     };
 
     // send data to the server
-    fetch(`http://localhost:5000/equipment/${_id}`, {
+    fetch(`https://simple-assignment-ten-ph.vercel.app/equipment/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -74,8 +74,8 @@ const Update = () => {
 
   return (
     <div>
-      <div className="bg-green-200 p-16">
-        <h2 className="text-3xl font-semibold text-center py-5">Update A Equipment</h2>
+      <div className="bg-green-200 p-4 sm:p-16">
+        <h2 className="sm:text-3xl sm:font-semibold text-center py-5">Update A Equipment</h2>
         <form onSubmit={handleUpdateEquipment}>
           {/* form-row */}
           <div className="md:flex">
@@ -103,7 +103,7 @@ const Update = () => {
                   name="categoryName"
                   defaultValue={CategoryName}
                   placeholder="Category Name"
-                  className="input input-bordered w-full ml-2"
+                  className="input input-bordered w-full sm:ml-2"
                 />
               </label>
             </div>
@@ -133,7 +133,7 @@ const Update = () => {
                   name="Price"
                   defaultValue={Price}
                   placeholder="Price"
-                  className="input input-bordered w-full ml-2"
+                  className="input input-bordered w-full sm:ml-2"
                 />
               </label>
             </div>
@@ -163,7 +163,7 @@ const Update = () => {
                   name="Rating"
                   defaultValue={Rating}
                   placeholder="Rating"
-                  className="input input-bordered w-full ml-2"
+                  className="input input-bordered w-full sm:ml-2"
                 />
               </label>
             </div>
@@ -193,7 +193,7 @@ const Update = () => {
                   name="StockStatus"
                   defaultValue={StockStatus}
                   placeholder="Stock Status"
-                  className="input input-bordered w-full ml-2"
+                  className="input input-bordered w-full sm:ml-2"
                 />
               </label>
             </div>
@@ -224,7 +224,7 @@ const Update = () => {
                   name="UserName"
                   defaultValue={user && user.displayName}
                   placeholder="User Name"
-                  className="input input-bordered w-full ml-2"
+                  className="input input-bordered w-full sm:ml-2"
                   disabled
                 />
               </label>

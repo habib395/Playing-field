@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { FaGoogle } from "react-icons/fa";
 import auth from './../firebase/firebase.config';
 
@@ -52,8 +53,13 @@ const Login = () => {
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
-                <input type="passsword" placeholder="password" className="input input-bordered" name="password" required />
+                <input type="password" placeholder="password" className="input input-bordered" name="password" required />
             </div>
+            <label>
+                <NavLink to={`/forget?email=${encodeURIComponent(email)}`} className="label-text-alt link link-hover">
+                Forget password?
+                </NavLink>
+            </label>
             <div className="form-control mt-6">
                 <button type="submit" className="btn bg-green-500">Login</button>
             </div>

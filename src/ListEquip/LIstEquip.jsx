@@ -16,7 +16,7 @@ const LIstEquip = ({ item, equipmentList, setEquipmentList }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/equipment/${_id}`, {
+        fetch(`https://simple-assignment-ten-ph.vercel.app/equipment/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -39,7 +39,7 @@ const LIstEquip = ({ item, equipmentList, setEquipmentList }) => {
   return (
     <Slide>
       <div key={item._id} className="w-10/12 mx-auto py-5">
-        <div className="card card-side items-center bg-base-100 shadow-xl">
+        <div className="sm:flex card-side items-center bg-base-100 shadow-xl">
           <figure>
             <img src={item.Image} alt={item.ItemName} />
           </figure>

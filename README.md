@@ -1,8 +1,20 @@
-# React + Vite
+# Website Name: FIELD 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Feature: 
 
-Currently, two official plugins are available:
+--Interactive UI with modern Tools
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+--User Authentication and Personalized Content
+
+--Product Details with high-Quality Images
+
+--Responsive and Mobile friendly Design
+
+--Real Time Data Handling and Update
+
+--Customizable Product Display with Filter
+
+
+# Live site link:"https://finicky-camp.surge.sh/"
+
+

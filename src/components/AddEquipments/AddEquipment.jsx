@@ -26,7 +26,7 @@ const AddEquipment = () => {
         console.log(newEquipment);
 
         // send data to the server
-        fetch('http://localhost:5000/addEquipment', {
+        fetch('https://simple-assignment-ten-ph.vercel.app/addEquipment', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -48,8 +48,8 @@ const AddEquipment = () => {
         event.target.reset()
     }
   return (
-    <div className="bg-green-200 p-16">
-      <h2 className="text-3xl font-semibold text-center py-5">All A Equipment</h2>
+    <div className="bg-green-200 p-4 sm:p-16">
+      <h2 className="sm:text-3xl font-semibold text-center py-5">Add A Equipment</h2>
       <form onSubmit={handleAddEquipment}>
         {/* form-row */}
         <div className="md:flex">
@@ -66,7 +66,7 @@ const AddEquipment = () => {
                 <span className="label-text">Category Name</span>
             </label>
             <label className="input-group">
-            <input type="text" name="categoryName" placeholder="Category Name" className="input input-bordered w-full ml-2" />
+            <input type="text" name="categoryName" placeholder="Category Name" className="input input-bordered w-full sm:ml-2" />
             </label>
          </div>
         </div>
@@ -84,7 +84,7 @@ const AddEquipment = () => {
                 <span className="label-text">Price</span>
             </label>
             <label className="input-group">
-            <input type="text" name="Price" placeholder="Price" className="input input-bordered w-full ml-2" />
+            <input type="text" name="Price" placeholder="Price" className="input input-bordered w-full sm:ml-2" />
             </label>
          </div>
         </div>
@@ -102,7 +102,7 @@ const AddEquipment = () => {
                 <span className="label-text">Rating</span>
             </label>
             <label className="input-group">
-            <input type="text" name="Rating" placeholder="Rating" className="input input-bordered w-full ml-2" />
+            <input type="text" name="Rating" placeholder="Rating" className="input input-bordered w-full sm:ml-2" />
             </label>
          </div>
         </div>
@@ -120,7 +120,7 @@ const AddEquipment = () => {
                 <span className="label-text">Stock Status</span>
             </label>
             <label className="input-group">
-            <input type="text" name="StockStatus" placeholder="Stock Status" className="input input-bordered w-full ml-2" />
+            <input type="text" name="StockStatus" placeholder="Stock Status" className="input input-bordered w-full sm:ml-2" />
             </label>
          </div>
         </div>
@@ -142,7 +142,7 @@ const AddEquipment = () => {
             <label className="input-group">
             <input type="text" name="UserName" 
             defaultValue={user && user.displayName}
-            placeholder="User Name" className="input input-bordered w-full ml-2" disabled/>
+            placeholder="User Name" className="input input-bordered w-full sm:ml-2" disabled/>
             </label>
          </div>
         </div>
