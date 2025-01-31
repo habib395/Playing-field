@@ -175,7 +175,7 @@ const Home = () => {
                   src="https://i.ibb.co.com/9NZ12Gx/satis-five.png"
                   alt="Movie"
                 />
-              </figure>
+      https://i.ibb.co.com/180bwxS/tra- </figure>
               <div className="card-body">
                 <h2 className="card-title">Tennis Racket Pro</h2>
                 <p>
