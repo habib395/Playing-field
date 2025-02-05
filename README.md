@@ -64,16 +64,16 @@ To run this project locally, follow these steps:
    First, clone both the client-side and server-side repositories using the following commands:
 
    ```bash
-   git clone (https://github.com/habib395/parcelCall-twelve)
-   git clone (https://github.com/habib395/parcel-delivery-server)
+   git clone (https://github.com/habib395/Playing-field)
+   git clone (https://github.com/habib395/Playing-flied-server-side)
 
-   cd client
-npm install
-cd ../server
-npm install
-npm start
-npm run dev
-http://localhost:3000
+- cd client
+- npm install
+- cd ../server
+- npm install
+- npm start
+- npm run dev
+- http://localhost:3000
 ### Notes:
 - Replace `[client-side-repo-link]` and `[server-side-repo-link]` with the actual GitHub repository URLs.
 - Update the `.env` variables with the necessary credentials for Firebase and MongoDB for both the client and server sides.
@@ -82,4 +82,5 @@ http://localhost:3000
    ## 7. Live Project & Resources
 
 - **Live Project**: (https://finicky-camp.surge.sh/)  
-- **Client Repository**: [GitHub Client Repo Link](https://github.com/habib395/parcel-delivery-server)  
+- **Client Repository**: [GitHub Client Repo Link](https://github.com/habib395/Playing-field)
+- **Server Repository**: [GitHub Server Repo Link](https://github.com/habib395/Playing-flied-server-side)  
