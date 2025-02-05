@@ -6,7 +6,7 @@ EquipmentSports is a responsive online store for sports equipment, offering user
 
 ## 2. Screenshot
 
-(Include a clean screenshot of the homepage or key feature of the project here.)
+![Playing-filed Screenshot](https://i.ibb.co.com/21JbYkFc/1.png)
 
 ## 3. Technologies Used
 
