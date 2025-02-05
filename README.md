@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-EquipmentSports is a responsive online store for sports equipment, offering users the ability to browse, add, update, and manage sports accessories. It supports authentication, product sorting, and a dark/light mode toggle for an improved user experience.
+Field is a responsive online store for sports equipment, offering users the ability to browse, add, update, and manage sports accessories. It supports authentication, product sorting, and a dark/light mode toggle for an improved user experience.
 
 ## 2. Screenshot
 
