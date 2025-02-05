@@ -1,20 +1,67 @@
-# Website Name: FIELD 
+# EquiSports (Sports Equipment Store)
 
-# Feature: 
+## 1. Project Overview
 
---Interactive UI with modern Tools
+EquiSports is a responsive online store for sports equipment, offering users the ability to browse, add, update, and manage sports accessories. It supports authentication, product sorting, and a dark/light mode toggle for an improved user experience.
 
---User Authentication and Personalized Content
+## 2. Screenshot
 
---Product Details with high-Quality Images
+(Include a clean screenshot of the homepage or key feature of the project here.)
 
---Responsive and Mobile friendly Design
+## 3. Technologies Used
 
---Real Time Data Handling and Update
+**Frontend:**
+- React
+- Tailwind CSS
+- Firebase Authentication
 
---Customizable Product Display with Filter
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
 
+**Other:**
+- JWT Authentication
+- Lottie React
+- React Awesome Reveal
+- React Tooltip
 
-# Live site link:"https://finicky-camp.surge.sh/"
+## 4. Core Features
 
+- **User Authentication**: Users can sign up and log in using Email/Password & Social Login (e.g., Google).
+- **Sports Equipment Management**: Add, update, and delete sports equipment.
+- **Private Routes**: Secure routes for user-specific equipment management.
+- **Sorting**: Sorting functionality for the All Sports Equipment page.
+- **Dark/Light Mode Toggle**: Toggle between dark and light themes for better user experience.
+- **Loading Spinner**: Shows a loading spinner when the content is being fetched.
+- **404 Error Page**: Custom 404 error page for unsupported routes.
+- **Responsive Design**: Fully responsive design to work on all devices.
 
+## 5. Dependencies Used
+
+**Frontend:**
+- `react-router-dom`
+- `axios`
+- `tailwindcss`
+- `firebase`
+- `lottie-react`
+- `react-awesome-reveal`
+- `react-tooltip`
+
+**Backend:**
+- `express`
+- `mongoose`
+- `jwt-simple`
+- `dotenv`
+- `cors`
+
+## 6. How to Run the Project Locally
+
+### Clone the Repository:
+
+Clone the repository to your local machine:
+
+```bash
+git clone [Client Repo URL]
+git clone [Server Repo URL]
