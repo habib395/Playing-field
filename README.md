@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-EquiSports is a responsive online store for sports equipment, offering users the ability to browse, add, update, and manage sports accessories. It supports authentication, product sorting, and a dark/light mode toggle for an improved user experience.
+EquipmentSports is a responsive online store for sports equipment, offering users the ability to browse, add, update, and manage sports accessories. It supports authentication, product sorting, and a dark/light mode toggle for an improved user experience.
 
 ## 2. Screenshot
 
@@ -55,13 +55,31 @@ EquiSports is a responsive online store for sports equipment, offering users the
 - `jwt-simple`
 - `dotenv`
 - `cors`
-
 ## 6. How to Run the Project Locally
 
-### Clone the Repository:
+To run this project locally, follow these steps:
 
-Clone the repository to your local machine:
+1. **Clone the repositories:**
 
-```bash
-git clone [Client Repo URL]
-git clone [Server Repo URL]
+   First, clone both the client-side and server-side repositories using the following commands:
+
+   ```bash
+   git clone (https://github.com/habib395/parcelCall-twelve)
+   git clone (https://github.com/habib395/parcel-delivery-server)
+
+   cd client
+npm install
+cd ../server
+npm install
+npm start
+npm run dev
+http://localhost:3000
+### Notes:
+- Replace `[client-side-repo-link]` and `[server-side-repo-link]` with the actual GitHub repository URLs.
+- Update the `.env` variables with the necessary credentials for Firebase and MongoDB for both the client and server sides.
+
+
+   ## 7. Live Project & Resources
+
+- **Live Project**: (https://finicky-camp.surge.sh/)  
+- **Client Repository**: [GitHub Client Repo Link](https://github.com/habib395/parcel-delivery-server)  
