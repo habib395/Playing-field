@@ -9,7 +9,7 @@ const ListEquipment = () => {
     
 
   useEffect(() => {
-    fetch(`https://simple-assignment-ten-ph.vercel.app/equipment/${email}`)
+    fetch(`http://localhost:5000/equipment/${email}`)
       .then((res) => res.json())
       .then((data) => setEquipmentList(data))
       .catch((error) => console.error("Error fetching equipment:", error));

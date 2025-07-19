@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://simple-assignment-ten-ph.vercel.app/addEquipment"),
+        loader: () => fetch("http://localhost:5000/addEquipment"),
       },
       {
         path: "/login",
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/allSport",
         element: <AllSport></AllSport>,
-        loader: () => fetch("https://simple-assignment-ten-ph.vercel.app/addEquipments"),
+        loader: () => fetch("http://localhost:5000/addEquipments"),
       },
       {
         path: "details/:id",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) => {
-          const res = await fetch("https://simple-assignment-ten-ph.vercel.app/addEquipment");
+          const res = await fetch("http://localhost:5000/addEquipment");
           const data = await res.json();
           const singleData = data.find((d) => d._id == params.id);
           return singleData;
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) => {
-          const res = await fetch("https://simple-assignment-ten-ph.vercel.app/addEquipments");
+          const res = await fetch("http://localhost:5000/addEquipments");
           const data = await res.json();
           const singleData = data.find((d) => d._id == params.id);
           return singleData;
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`https://simple-assignment-ten-ph.vercel.app/equipment/${params.email}/${params.id}`),
+          fetch(`http://localhost:5000/equipment/${params.email}/${params.id}`),
       },
       {
         path: "/equipment/:email",

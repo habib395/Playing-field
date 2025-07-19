@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, GoogleAuthProvider } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,9 +8,13 @@ import auth from "../firebase/firebase.config";
 export const AuthContext = createContext()
 
 const  AuthProvider = ({routes}) =>{
+    const createUser = (email, password) =>{
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
 
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const googleProvider = new GoogleAuthProvider()
 
     const handleRegister = (email, password)=>{
         return createUserWithEmailAndPassword(auth, email, password)
@@ -36,6 +40,10 @@ const  AuthProvider = ({routes}) =>{
             updatedData)
     }
 
+    const signInWithGoogle = () =>{
+        return signInWithPopup(auth, googleProvider)
+    }
+
     const authInfo = {
         handleRegister,
         handleLogin,
@@ -44,7 +52,9 @@ const  AuthProvider = ({routes}) =>{
         updateUserProfile,
         user,
         setUser,
-        loading
+        loading,
+        createUser,
+        signInWithGoogle
     }
 
     useEffect(()=>{

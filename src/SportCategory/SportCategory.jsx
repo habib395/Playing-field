@@ -5,7 +5,7 @@ const SportCategory = () => {
     const [category, setCategory] = useState([])
 
     useEffect(() =>{
-        fetch("https://simple-assignment-ten-ph.vercel.app/addEquipments")
+        fetch("http://localhost:5000/addEquipments")
         .then((res) => res.json())
         .then((data) => {
             const uniqueCategories = [...new Set(data.map((item) => item.CategoryName))]

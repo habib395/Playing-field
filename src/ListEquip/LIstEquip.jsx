@@ -16,7 +16,7 @@ const LIstEquip = ({ item, equipmentList, setEquipmentList }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://simple-assignment-ten-ph.vercel.app/equipment/${_id}`, {
+        fetch(`http://localhost:5000/equipment/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

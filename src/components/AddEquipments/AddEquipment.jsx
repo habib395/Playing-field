@@ -26,7 +26,7 @@ const AddEquipment = () => {
         console.log(newEquipment);
 
         // send data to the server
-        fetch('https://simple-assignment-ten-ph.vercel.app/addEquipment', {
+        fetch('http://localhost:5000/addEquipment', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
