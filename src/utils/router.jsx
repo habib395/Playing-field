@@ -11,6 +11,7 @@ import Update from "../Update/Update";
 import AllDetails from "../AllDetails/AllDetails";
 import PrivateRoute from "./../PrivateRoute/PrivateRoute";
 import Forget from "../Forget/Forget";
+import CategoryProducts from "../SportCategory/CategoryProducts"
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/category/:categoryName",
+        element: <CategoryProducts></CategoryProducts>
+      }
     ],
   },
   {

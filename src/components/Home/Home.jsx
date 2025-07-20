@@ -8,20 +8,11 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import football from "../../football.json";
 import Lottie from "lottie-react";
 import { Bounce, Slide } from "react-awesome-reveal";
+import Feature from "../../SportCategory/Feature";
 
 const Home = () => {
   const products = useLoaderData();
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
@@ -32,12 +23,6 @@ const Home = () => {
             Your Ultimate Destination for Premium Sports Gear and Accessories
           </p>
         </Slide>
-        <button
-          onClick={toggleTheme}
-          className="p-2 bg-green-500 text-white rounded shadow hover:bg-green-600"
-        >
-          {darkMode ? <MdLightMode /> : <MdDarkMode />}
-        </button>
       </div>
       <Slider></Slider>
       <div className="py-8">
@@ -57,6 +42,9 @@ const Home = () => {
             <Lottie animationData={football} />
           </div>
         </div>
+      </div>
+      <div>
+      <Feature></Feature>
       </div>
       <div>
         <h2 className="text-green-500 font-bold text-xl sm:text-4xl text-center py-3">

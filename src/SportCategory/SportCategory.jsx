@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cat from "../Cat/Cat";
+import Feature from "./Feature"
 
 const SportCategory = () => {
     const [category, setCategory] = useState([])
