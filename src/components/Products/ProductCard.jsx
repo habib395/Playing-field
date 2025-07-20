@@ -6,7 +6,7 @@ const ProductCard = ({product}) => {
   const { _id, ItemName, Image, Price, Description  } = product
 
   return (
-    <div className="card bg-transparent border-2 border-green-500">
+    <div className="card bg-transparent border-2 border-none shadow-md p-4">
       <figure className="p-4">
         <img 
           src={Image}
@@ -15,13 +15,13 @@ const ProductCard = ({product}) => {
         />
       </figure>
       <div className="card-body sm:p-3 items-center text-center">
-        <h2 className="card-title text-green-700">{ItemName}
+        <h2 className="card-title font-semibold text-black-700">{ItemName}
+        {/* <div className="badge bg-transparent">{Price} $</div> */}
         </h2>
-        <div className="badge badge-success text-white">{Price} $</div>
-        <p className="text-green-700">{Description}</p>
+        <p className="text-black-700">{Description}</p>
         
           <NavLink to={`/details/${_id}`}>
-          <button className="btn btn-success">View Details</button>
+          <button className="btn btn-sm btn-outline text-black">View Details</button>
           </NavLink>
       
       </div>

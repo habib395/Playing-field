@@ -34,11 +34,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className='bg-white dark:bg-gray-900 dark:text-white shadow-md'>
-      <div className='w-11/12 mx-auto flex items-center justify-between py-4'>
+    <div className='navbar fixed bg-opacity-30 z-50 dark:bg-gray-900 dark:text-white shadow-md text-black'>
+      <div className='w-11/12 mx-auto flex items-center justify-between py-2'>
         {/* Logo */}
-        <div className='flex items-center gap-2 text-green-500 font-bold text-xl md:text-3xl'>
-          <GiAmericanFootballPlayer className='hidden md:block text-3xl' />
+        <div className='flex items-center gap-2 text-white font-bold text-xl md:text-3xl'>
+          <GiAmericanFootballPlayer className='hidden text-blue-500 md:block text-3xl' />
           <p>FIELD</p>
         </div>
 
@@ -51,10 +51,10 @@ const Navbar = () => {
 
         {/* Links + Auth + Theme (Desktop) */}
         <div className='hidden md:flex items-center gap-6'>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/allSport">All Sports Equipment</NavLink>
-          <NavLink to="/addEquipment">Add Equipment</NavLink>
-          <NavLink to={`/equipment/${user?.email}`}>My Equipment List</NavLink>
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/allSport"> ALL SPORTS EQUIPMENT</NavLink>
+          <NavLink to="/addEquipment">ALL EQUIPMENT</NavLink>
+          <NavLink to={`/equipment/${user?.email}`}>MY EQUIPMENT LIST</NavLink>
 
           <button onClick={toggleTheme} className="btn btn-sm bg-transparent">
             {darkMode ? '☀️' : '🌙'}
@@ -69,15 +69,15 @@ const Navbar = () => {
                     {user.displayName}
                   </span>
                 </div>
-                <button className='btn btn-sm bg-green-500' onClick={handleLogOut}>Logout</button>
+                <button className='btn btn-sm' onClick={handleLogOut}>Logout</button>
               </div>
             ) : (
               <div className='flex gap-2'>
                 <NavLink to="/login">
-                  <button className='btn btn-sm bg-green-500'>Login</button>
+                  <button className='btn btn-sm bg-blue-500'>Login</button>
                 </NavLink>
                 <NavLink to="/register">
-                  <button className='btn btn-sm bg-green-500'>Register</button>
+                  <button className='btn btn-sm bg-blue-500'>Register</button>
                 </NavLink>
               </div>
             )
@@ -102,15 +102,15 @@ const Navbar = () => {
               <div className='flex items-center gap-3'>
                 <img className='w-8 h-8 rounded-full object-cover' src={user.photoURL} alt="User" />
                 <span>{user.displayName}</span>
-                <button className='btn btn-sm bg-green-500 outline-none' onClick={handleLogOut}>Logout</button>
+                <button className='btn btn-sm bg-black-500 outline-none' onClick={handleLogOut}>Logout</button>
               </div>
             ) : (
               <div className='flex gap-2'>
                 <NavLink to="/login">
-                  <button className='btn btn-sm outline-none bg-green-500'>Login</button>
+                  <button className='btn btn-sm outline-none bg-black-500'>Login</button>
                 </NavLink>
                 <NavLink to="/register">
-                  <button className='btn btn-sm bg-green-500 outline-none'>Register</button>
+                  <button className='btn btn-sm bg-black-500 outline-none'>Register</button>
                 </NavLink>
               </div>
             )

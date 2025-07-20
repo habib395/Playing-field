@@ -16,20 +16,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <div className="p-4 text-sm text-right sm:flex justify-between">
-        <div></div>
-        <Slide>
-          <p className="text-green-400 text-center sm:text-xl">
-            Your Ultimate Destination for Premium Sports Gear and Accessories
-          </p>
-        </Slide>
-      </div>
       <Slider></Slider>
       <div className="py-8">
-        <SportCategory></SportCategory>
+        {/* <SportCategory></SportCategory> */}
         <div className="sm:flex flex-cols items-center justify-center w-11/12 mx-auto p-3 sm:p-16 gap-4">
           <Slide>
-            <p className="sm:text-xl sm:font-semibold text-green-400">
+            <p className="sm:text-2xl sm:font-semibold">
               <i>
                 "Explore our Sports Categories featuring top-notch gear like
                 Soccer Cleats, Tennis Rackets, Fitness Equipment, Winter Sports
@@ -44,13 +36,28 @@ const Home = () => {
         </div>
       </div>
       <div>
-      <Feature></Feature>
+        <div
+  className="hero min-h-screen"
+  style={{
+    backgroundImage: "url(https://i.ibb.co/9z1RpSf/monochrome-portrait-professional-tennis-player-1.jpg)",
+  }}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-neutral-content text-center">
+  <Feature></Feature>
+  </div>
+</div>
+      
       </div>
-      <div>
-        <h2 className="text-green-500 font-bold text-xl sm:text-4xl text-center py-3">
+      <div className="py-16">
+        <h2 className="text-black font-bold text-xl sm:text-4xl text-center py-3">
           OUR PRODUCT
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2 sm:p-10">
+         <Slide>
+          <p className="text-black text-center sm:text-xl">
+            Your Ultimate Destination for Premium Sports Gear and Accessories
+          </p>
+        </Slide>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-2 sm:p-10">
           {products.map((product, idx) => (
             <ProductCard key={idx} product={product}></ProductCard>
           ))}
@@ -58,7 +65,7 @@ const Home = () => {
       </div>
       {/* about us section  */}
       <div className="py-10">
-        <h2 className="text-green-700 font-bold text-xl sm:text-4xl text-center py-3">
+        <h2 className="text-black font-bold text-xl sm:text-4xl text-center py-3">
           ABOUT US
         </h2>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import sliderImg from "../../assets/one.png"
-import sliderImg2 from "../../assets/two.png"
-import sliderImg3 from "../../assets/three.png"
+import sliderImg from "../../assets/one.jpg"
+import sliderImg2 from "../../assets/two.jpg"
+import sliderImg3 from "../../assets/three.jpg"
 
 const Slider = () => {
     const [current, setCurrent] = useState(1)
@@ -18,7 +18,7 @@ const Slider = () => {
 
     return (
         <div>
-            <div className="carousel w-full max-h-96">
+            <div className="carousel w-full z-10">
             <div id="slider1"
             className={`carousel-item relative w-full ${current === 1 ? "block" : "hidden"}`}>
                 <img src={sliderImg} className="w-full" alt="Slider 1" />

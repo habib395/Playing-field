@@ -11,7 +11,7 @@ const AboutUs = () => {
     }, [])
     return (
         <div className="sm:flex flex-cols items-center justify-center">
-            <div className="text-white bg-green-500 shadow-2xl p-3 lg:p-10 m-5 rounded-lg lg:w-full h-96" data-aos="fade-down">
+            <div className="shadow-2xl p-3 lg:p-10 m-5 rounded-lg lg:w-full h-96" data-aos="fade-down">
                 <p className="text-2xl lg:text-7xl">
                 <GoGoal />
                 </p>
@@ -20,7 +20,7 @@ const AboutUs = () => {
             To inspire and empower every individual to achieve their athletic dreams with high-quality, affordable, and sustainable sports equipment.
             </p>
             </div>
-            <div className="text-white bg-green-500 shadow-2xl p-3 lg:p-10 m-5 rounded-lg md:w-full h-96" data-aos="fade-up">
+            <div className="shadow-2xl p-3 lg:p-10 m-5 rounded-lg md:w-full h-96" data-aos="fade-up">
             <p className="text-2xl lg:text-7xl">
             <MdLocalOffer />
                 </p>
@@ -29,7 +29,7 @@ const AboutUs = () => {
             Explore a wide range of premium sports gear, apparel, and accessories tailored for various sports disciplines. Whether it's football, tennis, basketball, or fitness, we've got you covered.
             </p>
             </div>
-            <div className="text-white bg-green-500 shadow-2xl p-3 lg:p-10 m-5 rounded-lg md:w-full h-96" data-aos="fade-down">
+            <div className="shadow-2xl p-3 lg:p-10 m-5 rounded-lg md:w-full h-96" data-aos="fade-down">
             <p className="text-2xl lg:text-7xl">
             <RiChatVoiceAiFill />
                 </p>
