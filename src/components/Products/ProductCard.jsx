@@ -21,7 +21,7 @@ const ProductCard = ({product}) => {
         <p className="text-black-700">{Description}</p>
         
           <NavLink to={`/details/${_id}`}>
-          <button className="btn btn-sm btn-outline text-black">View Details</button>
+          <button className="btn btn-sm btn-outline">View Details</button>
           </NavLink>
       
       </div>

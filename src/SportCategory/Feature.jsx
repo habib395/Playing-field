@@ -9,11 +9,6 @@ import {FaDumbbell, FaWater, FaShoppingBag } from "react-icons/fa";
 import { MdOutlineSportsHandball, MdOutlineBedroomParent } from "react-icons/md";
 import { BiSolidDrink } from "react-icons/bi";
 
-
-
-
-
-
 const Feature = ({ data }) => {
   const navigate = useNavigate();
 

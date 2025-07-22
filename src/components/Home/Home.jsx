@@ -65,20 +65,20 @@ const Home = () => {
       </div>
       {/* about us section  */}
       <div className="py-10">
-        <h2 className="text-black font-bold text-xl sm:text-4xl text-center py-3">
+        <h2 className="font-bold text-xl sm:text-4xl text-center py-3">
           ABOUT US
         </h2>
       </div>
       <AboutUs></AboutUs>
       {/* satisfaction section */}
       <div className="py-10">
-        <h2 className="text-green-500 font-bold text-xl sm:text-4xl text-center py-3">
+        <h2 className="font-bold text-xl sm:text-4xl text-center py-3">
           OUR CUSTOMER SATISFACTION
         </h2>
         {/* card customer */}
-        <div className="text-green-500 p-3 w-11/12 mx-auto">
+        <div className="p-3 w-11/12 mx-auto">
           <Bounce>
-            <div className="sm:flex card-side border-2 border-green-500 rounded-md">
+            <div className="sm:flex card-side border-2  rounded-md">
               <figure>
                 <img
                   src="https://i.ibb.co.com/VjbJPP6/satis-one.png"
